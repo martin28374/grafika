@@ -1,0 +1,141 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="template.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" />
+
+    <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+    <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
+  
+    <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        
+  
+    <!-- <script src="script.js"></script> -->
+  
+    <!-- <script src="jquery.sticky-kit.js "></script> -->
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script>
+    <meta name="generator" content="pandoc" />
+  <title>938hs89a rastrová grafika</title>
+  <style type="text/css">
+    code{white-space: pre;}
+  </style>
+</head>
+<body>
+
+    
+    <div class="container">
+    <div class="row">
+            <div class="span12">
+
+      
+      <h1 id="rastrová-grafika">Rastrová grafika</h1>
+<ul>
+<li><strong>pixel</strong>
+<ul>
+<li>Jeden barevný bod. Barva tohoto bodu se dá popsat různými způsoby,
+viz barevné modely, ale ten nejzákladnější je RGB</li>
+</ul></li>
+<li><strong>obrázek</strong>
+<ul>
+<li>obrázek je poté mřížka (či dvoudimenzionální pole) těchto
+pixelů</li>
+<li>mřížka má pochopitelně dva rozměry x,y kde každej pixel má barvu a 2
+souřadnice</li>
+<li>tahle mřížka se pak “předá displeji” a zobrazí se
+(zjednodušeně)</li>
+</ul></li>
+<li><strong>rozlišení</strong>
+<ul>
+<li>rozlišení je rozměr oné mřížky pixelů. Tradičně se udává buď dvojice
+(x,y) (1920,1080) nebo u známějších jako právě FullHD stačí jen y
+souřadnice 1080p</li>
+</ul></li>
+<li><strong>dpi</strong> (dots per inch)
+<ul>
+<li>u skenerů a tiskáren</li>
+<li>něco jako rozlišení ale ne pixelový, proto dots</li>
+<li>udává jak jemně umí tisknout tiskárna a jak přesně skenuje
+skener</li>
+</ul></li>
+<li><strong>ppi</strong> (pixels per inch)
+<ul>
+<li>měří to jak moc jsou pixely na obrazovce vidět</li>
+<li>HD rozlišení na mobilu stačí, ale na velký televizi je HD málo</li>
+<li>tohle se snaží podchytit PPI, který měří “hustotu pixelů” na
+obrazovce</li>
+<li>výpočet přes známou uhlopříčku a pravouhlej trojúhelník</li>
+</ul></li>
+<li><strong>barevná hloubka</strong> (bit depth)
+<ul>
+<li>zachycuje počet bitů potřebný pro uložení jedné barvy. Ve
+strandardním RGB, kde na každou složku připadá 1 Byte je to 3*8=24
+bitů,což je standardní barevná hloubka</li>
+<li>také zachycuje počet barev, které lze daným barevným modelem
+reprezentovat. Toto číslo je 2^(bit depth), tedy u standardního RGB
+2^24=16 mil barev.</li>
+</ul></li>
+<li><strong>alfa</strong> (průhlednost)
+<ul>
+<li>v některých formátech můžou být pixely průhledné (například RGBA u
+PNG)</li>
+<li>každý pixel má tedy jednu hodnotu průhlednosti navíc</li>
+<li>alfa hodnota můžemít taky bitovou hloubku (1b -&gt; Průhledný nebo
+ne. více b -&gt; více úrovní průhlednosti)</li>
+</ul></li>
+<li><strong>velikost</strong> - počet pixelů krát počet B na jeden pixel
+- výška krát šířka krát barevná hloubka</li>
+<li><strong>výhody</strong>
+<ul>
+<li>snadné pořízení pomocí fotoaparátu</li>
+<li>jdou dále editovat, “střihat”, měnit barvy atd</li>
+</ul></li>
+<li><strong>nevýhody</strong>
+<ul>
+<li>omezené množství informací, při zoomu je obrázek rozostřen</li>
+<li>Při editaci nelze rozložit na jednotlivé objekty</li>
+<li>fotky s vyšším rozlišením zabírají fakt hodně místa, klidně několik
+MB</li>
+</ul></li>
+<li><strong>praxe</strong>
+<ul>
+<li>gimp, photoshop, affinity, malování, corel</li>
+<li>soubory jpg, png, gif, … (jpg velka komprese, png kvalita a alfa,
+gif se hejbe)</li>
+<li>hlavně u fotografiích a cokoliv s nimi - web, koláž, …</li>
+</ul></li>
+</ul>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
